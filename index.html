@@ -2,91 +2,66 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monter un Simulateur Tools</title>
+<title>Monter un Simulateur Scripts</title>
 <style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
-    margin: 0;
-    padding: 20px;
-  }
-
-  h1 {
-    color: #ff5722;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  h2 {
-    color: #03a9f4;
-    margin-bottom: 10px;
-  }
-
-  .section {
-    background-color: #1e1e1e;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-  }
-
-  ul {
-    list-style-type: square;
-    padding-left: 20px;
-  }
-
-  a {
-    color: #00bcd4;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  pre {
-    background-color: #000;
-    color: #39ff14;
-    padding: 15px;
-    border-radius: 8px;
-    overflow-x: auto;
-  }
-
-  p {
-    line-height: 1.6;
-  }
+body {
+  background-color: #0f0f0f;
+  color: #eaeaea;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+h1 { color: #ff6a00; }
+h2 { color: #00c3ff; }
+.box {
+  background: #1c1c1c;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+pre {
+  background: #000;
+  color: #00ff6a;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
 </style>
 </head>
 <body>
 
-<h1>Monter un Simulateur Scripts & Tools</h1>
-<p style="text-align:center;">Welcome! Here you can find reliable scripts and modifications to enhance your Monter un Simulateur experience.</p>
+<h1>Monter un Simulateur - Professional Scripts Hub</h1>
+<p>Welcome to the official script and tools page for Monter un Simulateur. Here you will find powerful and optimized modifications to enhance your gameplay experience.</p>
 
-<div class="section">
-  <h2>Main Features</h2>
-  <ul>
-    <li>Unlimited Roulette Spins</li>
-    <li>Open Eggs Anywhere in the Game</li>
-    <li>Anti-Cheat Protection Enabled</li>
-    <li>Instant Teleport Functionality</li>
-  </ul>
-  <p>Download the main script here: <a href="https://gist.githubusercontent.com/fonhino7-png/d8e39a528f03648fb58f0e89e062fa1d/raw" target="_blank">Click to Access</a></p>
+<div class="box">
+<h2>Main Features</h2>
+<ul>
+  <li>Infinite Roulette System</li>
+  <li>Open Eggs Anywhere on the Map</li>
+  <li>Advanced Anti-Scam Protection</li>
+  <li>Fast Teleport System</li>
+</ul>
 </div>
 
-<div class="section">
-  <h2>HUD & Visual Enhancement Script</h2>
-  <p>This additional script ensures a clean visual experience by removing blur effects and keeping the game HUD always visible. Ideal for players who want maximum clarity and performance.</p>
-  <pre>
+<div class="box">
+<h2>Main Script Loader</h2>
+<p>Copy and execute the following script in your executor:</p>
+
+<pre>
+loadstring(game:HttpGet("https://gist.githubusercontent.com/fonhino7-png/d8e39a528f03648fb58f0e89e062fa1d/raw"))()
+</pre>
+</div>
+
+<div class="box">
+<h2>HUD & Visual Optimization Script</h2>
+<p>This script removes blur effects, hides unnecessary animations, and keeps the game HUD always visible for better performance and clarity.</p>
+
+<pre>
 -- 🔥 Simple Script: Removes Blur & Keeps HUD Enabled 🔥
 local Players = game:GetService("Players")
 local Lighting = game:GetService("Lighting")
 local player = Players.LocalPlayer
 local PlayerGui = player:WaitForChild("PlayerGui")
 
--- Function to remove any Blur effects
 local function removeBlur()
     for _, effect in pairs(Lighting:GetChildren()) do
         if effect:IsA("BlurEffect") then
@@ -95,7 +70,6 @@ local function removeBlur()
     end
 end
 
--- Function to enforce HUD visibility
 local function fixHUD()
     for _, gui in pairs(PlayerGui:GetChildren()) do
         if gui:IsA("ScreenGui") then
@@ -104,13 +78,12 @@ local function fixHUD()
     end
 end
 
--- Continuous loop to maintain HUD and remove blur
 while true do
     removeBlur()
     fixHUD()
     task.wait(0.5)
 end
-  </pre>
+</pre>
 </div>
 
 </body>
