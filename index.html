@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monter un Simulateur Tools</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    color: #ff5722;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    color: #03a9f4;
+    margin-bottom: 10px;
+  }
+
+  .section {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  }
+
+  ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+
+  a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  pre {
+    background-color: #000;
+    color: #39ff14;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<h1>Monter un Simulateur Scripts & Tools</h1>
+<p style="text-align:center;">Welcome! Here you can find reliable scripts and modifications to enhance your Monter un Simulateur experience.</p>
+
+<div class="section">
+  <h2>Main Features</h2>
+  <ul>
+    <li>Unlimited Roulette Spins</li>
+    <li>Open Eggs Anywhere in the Game</li>
+    <li>Anti-Cheat Protection Enabled</li>
+    <li>Instant Teleport Functionality</li>
+  </ul>
+  <p>Download the main script here: <a href="https://gist.githubusercontent.com/fonhino7-png/d8e39a528f03648fb58f0e89e062fa1d/raw" target="_blank">Click to Access</a></p>
+</div>
+
+<div class="section">
+  <h2>HUD & Visual Enhancement Script</h2>
+  <p>This additional script ensures a clean visual experience by removing blur effects and keeping the game HUD always visible. Ideal for players who want maximum clarity and performance.</p>
+  <pre>
+-- 🔥 Simple Script: Removes Blur & Keeps HUD Enabled 🔥
+local Players = game:GetService("Players")
+local Lighting = game:GetService("Lighting")
+local player = Players.LocalPlayer
+local PlayerGui = player:WaitForChild("PlayerGui")
+
+-- Function to remove any Blur effects
+local function removeBlur()
+    for _, effect in pairs(Lighting:GetChildren()) do
+        if effect:IsA("BlurEffect") then
+            effect:Destroy()
+        end
+    end
+end
+
+-- Function to enforce HUD visibility
+local function fixHUD()
+    for _, gui in pairs(PlayerGui:GetChildren()) do
+        if gui:IsA("ScreenGui") then
+            gui.Enabled = true
+        end
+    end
+end
+
+-- Continuous loop to maintain HUD and remove blur
+while true do
+    removeBlur()
+    fixHUD()
+    task.wait(0.5)
+end
+  </pre>
+</div>
+
+</body>
+</html>
